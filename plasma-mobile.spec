@@ -56,7 +56,6 @@ BuildArch:	noarch
 
 %package	wallpapers
 Summary:	KDE Plasma Active wallpapers
-Requires:	kde-filesystem
 BuildArch:	noarch
 %description	wallpapers
 %{summary}.
