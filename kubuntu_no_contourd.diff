@@ -1,0 +1,12 @@
+Index: plasma-mobile-0.5/CMakeLists.txt
+===================================================================
+--- plasma-mobile-0.5.orig/CMakeLists.txt	2013-08-20 16:22:26.000000000 +0100
++++ plasma-mobile-0.5/CMakeLists.txt	2013-09-17 15:26:53.609747593 +0100
+@@ -65,7 +65,6 @@
+ add_subdirectory(artwork)
+ add_subdirectory(components)
+ add_subdirectory(containments)
+-add_subdirectory(contourd)
+ add_subdirectory(dataengines)
+ add_subdirectory(qmlpackages)
+ add_subdirectory(runners)
