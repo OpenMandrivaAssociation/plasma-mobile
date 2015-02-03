@@ -22,6 +22,7 @@ BuildRequires:	oxygen-icon-theme
 BuildRequires:	shared-desktop-ontologies-devel
 BuildRequires:	soprano-devel
 BuildRequires:	knetworkmanager-devel
+BuildRequires:	pkgconfig(xcursor)
 Patch0:		kubuntu_no_dirmodel.diff
 Patch1:		kubuntu_no_contourd.diff
 
