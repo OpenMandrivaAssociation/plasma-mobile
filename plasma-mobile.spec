@@ -7,7 +7,7 @@
 Name:		plasma-mobile
 Summary:	KDE User Interface for mobile Devices
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPL-2.0 or LGPL-2.0 or LGPL-2.1
 Group:		Graphical desktop/KDE
 Url:		http://plasma-active.org/
