@@ -1,8 +1,0 @@
-[Desktop Entry]
-X-SuSE-translate=true
-Encoding=UTF-8
-Type=XSession
-Exec=startactive
-TryExec=startactive
-Name=Plasma Active 3
-Comment=A plasma workspace for mobile devices
