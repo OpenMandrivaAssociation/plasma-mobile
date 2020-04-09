@@ -1,4 +1,4 @@
-%define snapshot 20200318
+%define snapshot 20200409
 
 Name:		plasma-mobile
 Version:	0.0
