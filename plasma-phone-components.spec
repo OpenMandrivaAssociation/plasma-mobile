@@ -1,4 +1,4 @@
-%define snapshot 20200824
+%define snapshot 20200825
 
 Name:		plasma-phone-components
 Version:	0.0
@@ -6,8 +6,7 @@ Release:	0.%{snapshot}.1
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
-Patch0:		plasma-phone-components-no-dbus-run-session.patch
-Patch1:		plasma-phone-components-x11-session.patch
+Patch0:		plasma-phone-components-x11-session.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
