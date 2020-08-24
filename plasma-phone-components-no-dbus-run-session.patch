@@ -1,0 +1,11 @@
+diff -up plasma-phone-components-master/bin/kwinwrapper.in.omv~ plasma-phone-components-master/bin/kwinwrapper.in
+diff -up plasma-phone-components-master/bin/plasma-mobile.desktop.cmake.omv~ plasma-phone-components-master/bin/plasma-mobile.desktop.cmake
+--- plasma-phone-components-master/bin/plasma-mobile.desktop.cmake.omv~	2020-08-24 06:08:07.375697726 +0200
++++ plasma-phone-components-master/bin/plasma-mobile.desktop.cmake	2020-08-24 06:08:16.077751092 +0200
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Exec=dbus-run-session ${CMAKE_INSTALL_FULL_BINDIR}/kwinwrapper
++Exec=${CMAKE_INSTALL_FULL_BINDIR}/kwinwrapper
+ TryExec=${CMAKE_INSTALL_FULL_BINDIR}/kwinwrapper
+ DesktopNames=KDE
+ Name=Plasma Mobile
