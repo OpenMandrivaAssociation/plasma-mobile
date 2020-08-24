@@ -6,6 +6,8 @@ Release:	0.%{snapshot}.1
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
+Patch0:		plasma-phone-components-no-dbus-run-session.patch
+Patch1:		plasma-phone-components-x11-session.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
@@ -58,6 +60,7 @@ Plasma components for mobile phones
 
 %files
 %{_bindir}/kwinwrapper
+%{_bindir}/kwinwrapper_x11
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_phonepanel.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_homescreen.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
@@ -83,4 +86,4 @@ Plasma components for mobile phones
 %{_datadir}/plasma/shells/org.kde.plasma.phone
 %{_datadir}/sounds/sitter/ohits.ogg
 %{_datadir}/wayland-sessions/plasma-mobile.desktop
-
+%{_datadir}/xsessions/plasma-mobile-x11.desktop
