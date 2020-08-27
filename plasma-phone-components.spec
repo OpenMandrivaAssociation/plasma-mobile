@@ -2,11 +2,12 @@
 
 Name:		plasma-phone-components
 Version:	0.0
-Release:	0.%{snapshot}.1
+Release:	0.%{snapshot}.2
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
 Patch0:		plasma-phone-components-x11-session.patch
+Patch1:		plasma-phone-components-no-dbus-run-session.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
@@ -43,9 +44,24 @@ BuildRequires:	cmake(KF5Baloo)
 BuildRequires:	cmake(PkgConfig)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 Requires:	plasma-workspace
+Requires:	plasma-nano
+Requires:	ofono
+Requires:	qml(MeeGo.QOfono)
 
 %description
 Plasma components for mobile phones
+
+%package wayland
+Summary:	Wayland session files for Plasma phone components
+
+%description wayland
+Wayland session files for Plasma phone components
+
+%package x11
+Summary:	X11 session files for Plasma phone components
+
+%description x11
+X11 session files for Plasma phone components
 
 %prep
 %autosetup -p1 -n %{name}-master
@@ -58,8 +74,6 @@ Plasma components for mobile phones
 %ninja_install -C build
 
 %files
-%{_bindir}/kwinwrapper
-%{_bindir}/kwinwrapper_x11
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_phonepanel.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_homescreen.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
@@ -84,5 +98,11 @@ Plasma components for mobile phones
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/plasma/shells/org.kde.plasma.phone
 %{_datadir}/sounds/sitter/ohits.ogg
+
+%files wayland
+%{_bindir}/kwinwrapper
 %{_datadir}/wayland-sessions/plasma-mobile.desktop
+
+%files x11
+%{_bindir}/kwinwrapper_x11
 %{_datadir}/xsessions/plasma-mobile-x11.desktop
