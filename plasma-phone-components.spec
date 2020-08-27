@@ -2,7 +2,7 @@
 
 Name:		plasma-phone-components
 Version:	0.0
-Release:	0.%{snapshot}.2
+Release:	0.%{snapshot}.3
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
@@ -47,6 +47,8 @@ Requires:	plasma-workspace
 Requires:	plasma-nano
 Requires:	ofono
 Requires:	qml(MeeGo.QOfono)
+Requires:	plasma-pa
+Requires:	plasma-nm-mobile
 
 %description
 Plasma components for mobile phones
