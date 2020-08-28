@@ -2,7 +2,7 @@
 
 Name:		plasma-phone-components
 Version:	0.0
-Release:	0.%{snapshot}.3
+Release:	0.%{snapshot}.4
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
@@ -49,18 +49,22 @@ Requires:	ofono
 Requires:	qml(MeeGo.QOfono)
 Requires:	plasma-pa
 Requires:	plasma-nm-mobile
+# Used by the screenshot button
+Requires:	spectacle
 
 %description
 Plasma components for mobile phones
 
 %package wayland
 Summary:	Wayland session files for Plasma phone components
+Requires:	plasma-workspace-wayland
 
 %description wayland
 Wayland session files for Plasma phone components
 
 %package x11
 Summary:	X11 session files for Plasma phone components
+Requires:	plasma-workspace-x11
 
 %description x11
 X11 session files for Plasma phone components
