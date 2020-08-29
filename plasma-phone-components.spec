@@ -2,7 +2,7 @@
 
 Name:		plasma-phone-components
 Version:	0.0
-Release:	0.%{snapshot}.4
+Release:	0.%{snapshot}.5
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
@@ -47,6 +47,26 @@ Requires:	plasma-workspace
 Requires:	plasma-nano
 Requires:	ofono
 Requires:	qml(MeeGo.QOfono)
+Requires:	qml(org.kde.plasma.core)
+Requires:	qml(org.kde.plasma.components)
+Requires:	qml(org.kde.plasma.workspace.components)
+Requires:	qml(org.kde.plasma.networkmanagement)
+Requires:	qml(org.kde.bluezqt)
+Requires:	qml(org.kde.plasma.private.volume)
+Requires:	qml(org.kde.notificationmanager)
+Requires:	qml(org.kde.kirigami)
+Requires:	qml(org.kde.taskmanager)
+Requires:	qml(org.kde.plasma.private.nanoshell)
+Requires:	qml(org.kde.plasma.private.mobileshell)
+Requires:	qml(org.kde.plasma.private.containmentlayoutmanager)
+Requires:	qml(org.kde.kquickcontrolsaddons)
+Requires:	qml(org.kde.draganddrop)
+Requires:	qml(org.kde.plasma.extras)
+Requires:	qml(org.kde.milou)
+Requires:	qml(QtQml.Models)
+Requires:	qml(QtGraphicalEffects)
+Requires:	qt5-qtquickcontrols2
+Requires:	kwin
 Requires:	plasma-pa
 Requires:	plasma-nm-mobile
 # Used by the screenshot button
