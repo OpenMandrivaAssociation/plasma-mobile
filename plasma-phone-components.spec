@@ -1,8 +1,8 @@
-%define snapshot 20200825
+%define snapshot 20200901
 
 Name:		plasma-phone-components
 Version:	0.0
-Release:	0.%{snapshot}.6
+Release:	0.%{snapshot}.1
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
