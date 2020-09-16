@@ -1,4 +1,4 @@
-%define snapshot 20200901
+%define snapshot 20200916
 
 Name:		plasma-phone-components
 Version:	0.0
@@ -45,8 +45,6 @@ BuildRequires:	cmake(PkgConfig)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 Requires:	plasma-workspace
 Requires:	plasma-nano
-Requires:	ofono
-Requires:	qml(MeeGo.QOfono)
 Requires:	qml(org.kde.plasma.core)
 Requires:	qml(org.kde.plasma.components)
 Requires:	qml(org.kde.plasma.workspace.components)
@@ -102,7 +100,7 @@ X11 session files for Plasma phone components
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_phonepanel.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_homescreen.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
-%{_libdir}/qt5/qml/QtQuick/VirtualKeyboard
+#%{_libdir}/qt5/qml/QtQuick/VirtualKeyboard
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobileshell
 %{_datadir}/kservices5/kwin-script-org.kde.phone.multitasking.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.activities.desktop
