@@ -1,4 +1,4 @@
-%define snapshot 20200916
+%define snapshot 20201130
 
 Name:		plasma-phone-components
 Version:	0.0
