@@ -1,4 +1,4 @@
-%define snapshot 20201130
+%define snapshot 20201220
 
 Name:		plasma-phone-components
 Version:	0.0
@@ -119,7 +119,10 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.krunner
 %{_datadir}/plasma/plasmoids/org.kde.phone.panel
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
-%{_datadir}/plasma/shells/org.kde.plasma.phone
+%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
+%{_datadir}/knotifications5/plasma_phone_components.notifyrc
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 %{_datadir}/sounds/sitter/ohits.ogg
 
 %files wayland
