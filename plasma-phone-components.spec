@@ -8,6 +8,7 @@ Summary:	Plasma components for mobile phones
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
 Patch0:		plasma-phone-components-x11-session.patch
 Patch1:		plasma-phone-components-no-dbus-run-session.patch
+Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
