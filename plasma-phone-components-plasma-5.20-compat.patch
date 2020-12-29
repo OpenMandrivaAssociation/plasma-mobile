@@ -1,0 +1,42 @@
+commit 206f74c2314986d9b427b2de71b0b29909c0c5a6
+Author: Bernhard Rosenkränzer <bero@lindev.ch>
+Date:   Wed Dec 30 00:47:57 2020 +0100
+
+    Revert "Use PC3 instead of QQC2"
+    
+    This reverts commit 8014d1000c58fc9627c89d234c6d521d89b193ed.
+    
+    This allows running on top of stable Plasma 5.20.x
+
+diff --git a/containments/panel/package/contents/ui/quicksettings/BrightnessItem.qml b/containments/panel/package/contents/ui/quicksettings/BrightnessItem.qml
+index ddd4deb..240dc03 100644
+--- a/containments/panel/package/contents/ui/quicksettings/BrightnessItem.qml
++++ b/containments/panel/package/contents/ui/quicksettings/BrightnessItem.qml
+@@ -20,9 +20,10 @@
+ 
+ import QtQuick 2.0
+ import QtQuick.Layouts 1.1
++import QtQuick.Controls 2.2 as Controls
+ 
+ import org.kde.plasma.core 2.0 as PlasmaCore
+-import org.kde.plasma.components 3.0 as PC3
++import org.kde.plasma.components 2.0 as Components
+ 
+ RowLayout {
+     id: brightnessRoot
+@@ -48,13 +49,13 @@ RowLayout {
+         Layout.alignment: Qt.AlignTop
+         spacing: 0
+ 
+-        PC3.Label {
++        Components.Label {
+             id: brightnessLabel
+             width: parent.width
+             height: paintedHeight
+         }
+ 
+-        PC3.Slider {
++        Controls.Slider {
+             id: brightnessSlider
+             width: parent.width
+             onMoved: brightnessRoot.moved()

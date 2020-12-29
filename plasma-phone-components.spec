@@ -1,4 +1,4 @@
-%define snapshot 20201220
+%define snapshot 20201230
 
 Name:		plasma-phone-components
 Version:	0.0
@@ -9,6 +9,7 @@ Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/
 Patch0:		plasma-phone-components-x11-session.patch
 Patch1:		plasma-phone-components-no-dbus-run-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
+Patch3:		plasma-phone-components-plasma-5.20-compat.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
