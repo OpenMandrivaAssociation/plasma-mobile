@@ -1,15 +1,20 @@
 %define snapshot 20201230
+%define commit b34862e469ca4390f72e4db6520068bb12c09d3b
 
 Name:		plasma-phone-components
 Version:	0.0
-Release:	0.%{snapshot}.1
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
+%if "%{?commit:%{commit}}" != ""
+Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/%{commit}/plasma-phone-components-%{commit}.tar.bz2
+Release:	0.%{snapshot}.%{commit}.1
+%else
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
+Release:	0.%{snapshot}.1
+%endif
 Patch0:		plasma-phone-components-x11-session.patch
 Patch1:		plasma-phone-components-no-dbus-run-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
-Patch3:		plasma-phone-components-plasma-5.20-compat.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
@@ -89,7 +94,11 @@ Requires:	plasma-workspace-x11
 X11 session files for Plasma phone components
 
 %prep
+%if "%{?commit:%{commit}}" != ""
+%autosetup -p1 -n %{name}-%{commit}
+%else
 %autosetup -p1 -n %{name}-master
+%endif
 %cmake_kde5
 
 %build
@@ -121,11 +130,12 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.krunner
 %{_datadir}/plasma/plasmoids/org.kde.phone.panel
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
-%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
-%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 %{_datadir}/sounds/sitter/ohits.ogg
+%{_datadir}/plasma/shells/org.kde.plasma.phone
+#%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
+#%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+#%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 
 %files wayland
 %{_bindir}/kwinwrapper
