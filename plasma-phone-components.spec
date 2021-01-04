@@ -1,5 +1,7 @@
 %define snapshot 20201230
-%define commit b34862e469ca4390f72e4db6520068bb12c09d3b
+# Known good:
+#define commit b34862e469ca4390f72e4db6520068bb12c09d3b
+%define commit 981851ea5ed6e0fbbeb78dcee87fd4bc5dbedc8c
 
 Name:		plasma-phone-components
 Version:	0.0
