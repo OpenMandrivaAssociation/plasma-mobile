@@ -2,7 +2,8 @@
 # Known good:
 #define commit b34862e469ca4390f72e4db6520068bb12c09d3b
 #define commit 981851ea5ed6e0fbbeb78dcee87fd4bc5dbedc8c
-%define commit 27772fca5466f2597d80647c2bee1636d8314c69
+#define commit 27772fca5466f2597d80647c2bee1636d8314c69
+%define commit 3922350d2072d9fd6208117568d590e397a0abc4
 
 Name:		plasma-phone-components
 Version:	0.0
