@@ -3,7 +3,8 @@
 #define commit b34862e469ca4390f72e4db6520068bb12c09d3b
 #define commit 981851ea5ed6e0fbbeb78dcee87fd4bc5dbedc8c
 #define commit 27772fca5466f2597d80647c2bee1636d8314c69
-%define commit 3922350d2072d9fd6208117568d590e397a0abc4
+#define commit 3922350d2072d9fd6208117568d590e397a0abc4
+%define commit 1abb6737e4b26d2a0e056c51f0a5ed4194e47595
 
 Name:		plasma-phone-components
 Version:	0.0
@@ -136,10 +137,10 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
 %{_datadir}/sounds/sitter/ohits.ogg
-%{_datadir}/plasma/shells/org.kde.plasma.phone
-#%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
-#%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
-#%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
+#%{_datadir}/plasma/shells/org.kde.plasma.phone
+%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 
 %files wayland
 %{_bindir}/kwinwrapper
