@@ -1,0 +1,55 @@
+From 1abb6737e4b26d2a0e056c51f0a5ed4194e47595 Mon Sep 17 00:00:00 2001
+From: Marco Martin <notmart@gmail.com>
+Date: Tue, 15 Dec 2020 13:41:08 +0100
+Subject: [PATCH] use  org.kde.plasma.phoneshell as name
+
+Revert until we update to plasma 5.21
+
+---
+ CMakeLists.txt         | 2 +-
+ bin/kwinwrapper.in     | 2 +-
+ shell/metadata.desktop | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1a9bdc8..7b2708d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -41,7 +41,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+ include(CheckIncludeFiles)
+ 
+ plasma_install_package(look-and-feel org.kde.plasma.phone look-and-feel)
++plasma_install_package(shell org.kde.plasma.phone shells)
+-plasma_install_package(shell org.kde.plasma.phoneshell shells)
+ 
+ install(DIRECTORY kwinmultitasking/ DESTINATION ${DATA_INSTALL_DIR}/kwin/scripts/org.kde.phone.multitasking)
+ install(FILES kwinmultitasking/metadata.desktop DESTINATION ${SERVICES_INSTALL_DIR} RENAME kwin-script-org.kde.phone.multitasking.desktop)
+diff --git a/bin/kwinwrapper.in b/bin/kwinwrapper.in
+index 0ef5315..7a3a0af 100755
+--- a/bin/kwinwrapper.in
++++ b/bin/kwinwrapper.in
+@@ -16,7 +16,7 @@ export QT_VIRTUALKEYBOARD_STYLE=Plasma
+ 
+ export GRID_UNIT_PX=25
+ export FORCE_RIL_NUM_MODEMS=1
++export PLASMA_DEFAULT_SHELL=org.kde.plasma.phone
+-export PLASMA_DEFAULT_SHELL=org.kde.plasma.phoneshell
+ 
+ # work around to fix : https://bugs.launchpad.net/ubuntu/+source/mesa/+bug/1507584
+ if [ -d @KDE_INSTALL_FULL_LIBDIR@/libhybris-egl ]; then
+diff --git a/shell/metadata.desktop b/shell/metadata.desktop
+index 28b4bed..eb0f054 100644
+--- a/shell/metadata.desktop
++++ b/shell/metadata.desktop
+@@ -77,7 +77,7 @@ X-KDE-PluginInfo-Author=Aaron Seigo
+ X-KDE-PluginInfo-Category=
+ X-KDE-PluginInfo-Email=aseigo@kde.org
+ X-KDE-PluginInfo-License=GPLv2+
++X-KDE-PluginInfo-Name=org.kde.plasma.phone
+-X-KDE-PluginInfo-Name=org.kde.plasma.phoneshell
+ X-Plasma-FallbackPackage=org.kde.plasma.nano
+ X-KDE-PluginInfo-Version=0.1
+ X-KDE-PluginInfo-Website=https://plasma-mobile.org
+-- 
+GitLab
+
