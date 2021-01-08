@@ -1,4 +1,4 @@
-%define snapshot 20201230
+%define snapshot 20210108
 # Known good:
 #define commit b34862e469ca4390f72e4db6520068bb12c09d3b
 #define commit 981851ea5ed6e0fbbeb78dcee87fd4bc5dbedc8c
@@ -8,8 +8,8 @@
 #define commit 1abb6737e4b26d2a0e056c51f0a5ed4194e47595
 # Good with reverting 1abb673:
 #define commit 1933626d3669dcdd34a398ee78b1c174bd112d34
-
-%define commit 8014d1000c58fc9627c89d234c6d521d89b193ed
+#define commit 8014d1000c58fc9627c89d234c6d521d89b193ed
+%define commit 6204b90a5106e1a8acb1853efa0c8555d7c3097c
 
 Name:		plasma-phone-components
 Version:	0.0
@@ -25,7 +25,7 @@ Release:	0.%{snapshot}.1
 Patch0:		plasma-phone-components-x11-session.patch
 Patch1:		plasma-phone-components-no-dbus-run-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
-Patch3:		revert-1abb6737e4b26d2a0e056c51f0a5ed4194e47595.patch
+#Patch3:		revert-1abb6737e4b26d2a0e056c51f0a5ed4194e47595.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
@@ -142,11 +142,10 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.panel
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
-%{_datadir}/sounds/sitter/ohits.ogg
-%{_datadir}/plasma/shells/org.kde.plasma.phone
-#{_datadir}/plasma/shells/org.kde.plasma.phoneshell
-#{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
-#{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
+#{_datadir}/plasma/shells/org.kde.plasma.phone
+%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 
 %files wayland
 %{_bindir}/kwinwrapper

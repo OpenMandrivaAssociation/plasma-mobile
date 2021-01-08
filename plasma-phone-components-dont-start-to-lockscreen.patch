@@ -1,9 +1,9 @@
-diff -up plasma-phone-components-master/bin/kwinwrapper.in.omv~ plasma-phone-components-master/bin/kwinwrapper.in
---- plasma-phone-components-master/bin/kwinwrapper.in.omv~	2020-12-21 05:24:44.826127011 +0100
-+++ plasma-phone-components-master/bin/kwinwrapper.in	2020-12-21 05:24:49.691192965 +0100
-@@ -24,4 +24,4 @@ if [ -d @KDE_INSTALL_FULL_LIBDIR@/libhyb
- fi
+diff -up plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in.3~ plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in
+--- plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in.3~	2021-01-08 03:00:09.342147333 +0100
++++ plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in	2021-01-08 03:06:40.941547259 +0100
+@@ -18,4 +18,4 @@ export GRID_UNIT_PX=25
+ export FORCE_RIL_NUM_MODEMS=1
+ export PLASMA_DEFAULT_SHELL=org.kde.plasma.phoneshell
  
- touch /tmp/simplelogin_starting
 -startplasma-wayland --xwayland --libinput --lockscreen --inputmethod maliit-keyboard --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession
 +startplasma-wayland --xwayland --libinput --inputmethod maliit-keyboard --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession
