@@ -6,8 +6,10 @@
 #define commit 3922350d2072d9fd6208117568d590e397a0abc4
 # Known bad:
 #define commit 1abb6737e4b26d2a0e056c51f0a5ed4194e47595
+# Good with reverting 1abb673:
+#define commit 1933626d3669dcdd34a398ee78b1c174bd112d34
 
-%define commit 1933626d3669dcdd34a398ee78b1c174bd112d34
+%define commit 8014d1000c58fc9627c89d234c6d521d89b193ed
 
 Name:		plasma-phone-components
 Version:	0.0
