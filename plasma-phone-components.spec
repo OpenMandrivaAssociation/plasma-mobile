@@ -25,7 +25,7 @@ Release:	0.%{snapshot}.1
 Patch0:		plasma-phone-components-x11-session.patch
 Patch1:		plasma-phone-components-no-dbus-run-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
-#Patch3:		revert-1abb6737e4b26d2a0e056c51f0a5ed4194e47595.patch
+Patch3:		revert-1abb6737e4b26d2a0e056c51f0a5ed4194e47595.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
@@ -142,10 +142,10 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.panel
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
-#{_datadir}/plasma/shells/org.kde.plasma.phone
-%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
-%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
+%{_datadir}/plasma/shells/org.kde.plasma.phone
+#{_datadir}/plasma/shells/org.kde.plasma.phoneshell
+#{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+#{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 
 %files wayland
 %{_bindir}/kwinwrapper
