@@ -1,16 +1,23 @@
-%define snapshot 20210108
-%define commit 6204b90a5106e1a8acb1853efa0c8555d7c3097c
+#define snapshot 20210108
+#define commit 6204b90a5106e1a8acb1853efa0c8555d7c3097c
+%define plasmaver %(echo %{version} |cut -d. -f1-3)
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	0.0
+Version:	5.21.0
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/%{commit}/plasma-phone-components-%{commit}.tar.bz2
 Release:	0.%{snapshot}.%{commit}.1
 %else
+%if 0%{?snapshot}
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
 Release:	0.%{snapshot}.1
+%else
+Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
+Release:	1
+%endif
 %endif
 Patch0:		plasma-phone-components-x11-session.patch
 Patch1:		plasma-phone-components-no-dbus-run-session.patch
@@ -99,7 +106,11 @@ X11 session files for Plasma phone components
 %if "%{?commit:%{commit}}" != ""
 %autosetup -p1 -n %{name}-%{commit}
 %else
+%if 0%{?snapshot}
 %autosetup -p1 -n %{name}-master
+%else
+%autosetup -p1
+%endif
 %endif
 %cmake_kde5
 
@@ -108,8 +119,9 @@ X11 session files for Plasma phone components
 
 %install
 %ninja_install -C build
+%find_lang %{name} --all-name
 
-%files
+%files -f %{name}.lang
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_phonepanel.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_homescreen.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
