@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	5.21.2
+Version:	5.21.3
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
@@ -20,7 +20,6 @@ Release:	1
 %endif
 %endif
 Patch0:		plasma-phone-components-x11-session.patch
-Patch1:		plasma-phone-components-no-dbus-run-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
 # Revert the phone -> phoneshell rename until we have plasma 5.21
 Patch3:		revert-1abb6737e4b26d2a0e056c51f0a5ed4194e47595.patch
