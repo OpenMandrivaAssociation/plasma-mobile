@@ -20,7 +20,7 @@ diff -up plasma-phone-components-master/bin/CMakeLists.txt.2~ plasma-phone-compo
 diff -up plasma-phone-components-master/bin/kwinwrapper_x11.in.2~ plasma-phone-components-master/bin/kwinwrapper_x11.in
 --- plasma-phone-components-master/bin/kwinwrapper_x11.in.2~	2020-08-24 21:34:35.518207158 +0200
 +++ plasma-phone-components-master/bin/kwinwrapper_x11.in	2020-08-24 21:35:10.779705209 +0200
-@@ -0,0 +1,21 @@
+@@ -0,0 +1,22 @@
 +#!/bin/sh
 +
 +[ -f /etc/profile ] && . /etc/profile
@@ -30,18 +30,19 @@ diff -up plasma-phone-components-master/bin/kwinwrapper_x11.in.2~ plasma-phone-c
 +export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 +export EGL_PLATFORM=x11
 +
-+export QT_QUICK_CONTROLS_STYLE=Plasma
++export QT_QUICK_CONTROLS_STYLE=org.kde.breeze
 +export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
 +export QT_QUICK_CONTROLS_MOBILE=true
++export PLASMA_INTEGRATION_USE_PORTAL=1
 +export PLASMA_PLATFORM=phone:handset
 +export QT_VIRTUALKEYBOARD_STYLE=Plasma
 +
 +export GRID_UNIT_PX=25
 +export FORCE_RIL_NUM_MODEMS=1
-+export PLASMA_DEFAULT_SHELL=org.kde.plasma.phone
++export PLASMA_DEFAULT_SHELL=org.kde.plasma.phoneshell
 +
 +touch /tmp/simplelogin_starting
-+startplasma-x11 --libinput --inputmethod maliit-keyboard
++startplasma-x11 --libinput --inputmethod maliit-keyboard --exit-with-session=/usr/lib64/libexec/startplasma-waylandsession
 diff -up plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake.2~ plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake
 --- plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake.2~	2020-08-24 21:32:50.438722936 +0200
 +++ plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake	2020-08-24 21:34:21.162004382 +0200

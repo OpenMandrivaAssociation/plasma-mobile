@@ -9,20 +9,18 @@ Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/%{commit}/plasma-phone-components-%{commit}.tar.bz2
-Release:	1.%{snapshot}.%{commit}.1
+Release:	0.%{snapshot}.%{commit}.1
 %else
 %if 0%{?snapshot}
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
-Release:	1.%{snapshot}.1
+Release:	0.%{snapshot}.1
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
-Release:	1
+Release:	2
 %endif
 %endif
 Patch0:		plasma-phone-components-x11-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
-# Revert the phone -> phoneshell rename until we have plasma 5.21
-Patch3:		revert-1abb6737e4b26d2a0e056c51f0a5ed4194e47595.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
@@ -144,10 +142,9 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.panel
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
-%{_datadir}/plasma/shells/org.kde.plasma.phone
-#{_datadir}/plasma/shells/org.kde.plasma.phoneshell
-#{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
-#{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
+%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 
 %files wayland
 %{_bindir}/kwinwrapper
