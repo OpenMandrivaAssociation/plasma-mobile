@@ -1,8 +1,8 @@
-diff -up plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in.3~ plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in
---- plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in.3~	2021-01-08 03:00:09.342147333 +0100
-+++ plasma-phone-components-6204b90a5106e1a8acb1853efa0c8555d7c3097c/bin/kwinwrapper.in	2021-01-08 03:06:40.941547259 +0100
-@@ -18,4 +18,4 @@ export GRID_UNIT_PX=25
- export FORCE_RIL_NUM_MODEMS=1
+diff -up plasma-phone-components-5.22.0/bin/kwinwrapper.in.2~ plasma-phone-components-5.22.0/bin/kwinwrapper.in
+--- plasma-phone-components-5.22.0/bin/kwinwrapper.in.2~	2021-06-04 18:53:21.049024329 +0200
++++ plasma-phone-components-5.22.0/bin/kwinwrapper.in	2021-06-04 18:58:58.394186757 +0200
+@@ -16,4 +16,4 @@ export QT_VIRTUALKEYBOARD_STYLE=Plasma
+ 
  export PLASMA_DEFAULT_SHELL=org.kde.plasma.phoneshell
  
 -startplasma-wayland --xwayland --libinput --lockscreen --inputmethod maliit-keyboard --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession

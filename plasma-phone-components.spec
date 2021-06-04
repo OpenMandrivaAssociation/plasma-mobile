@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	5.21.5
+Version:	5.22.0
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
@@ -124,14 +124,13 @@ X11 session files for Plasma phone components
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
 #%{_libdir}/qt5/qml/QtQuick/VirtualKeyboard
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobileshell
-%{_datadir}/kservices5/kwin-script-org.kde.phone.multitasking.desktop
+%{_libdir}/qt5/qml/org/kde/plasma/private/mobilehomescreencomponents
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.activities.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.homescreen.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.krunner.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.panel.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.taskpanel.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.phone.desktop
-%{_datadir}/kwin/scripts/org.kde.phone.multitasking
 %{_datadir}/metainfo/org.kde.phone.activities.appdata.xml
 %{_datadir}/metainfo/org.kde.phone.krunner.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.phone.appdata.xml
