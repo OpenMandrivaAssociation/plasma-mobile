@@ -126,12 +126,6 @@ X11 session files for Plasma phone components
 #%{_libdir}/qt5/qml/QtQuick/VirtualKeyboard
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobileshell
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobilehomescreencomponents
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.activities.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.homescreen.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.krunner.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.panel.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.taskpanel.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phone.desktop
 %{_datadir}/metainfo/org.kde.phone.activities.appdata.xml
 %{_datadir}/metainfo/org.kde.phone.krunner.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.phone.appdata.xml
@@ -143,7 +137,6 @@ X11 session files for Plasma phone components
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
 %{_datadir}/plasma/shells/org.kde.plasma.phoneshell
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
 %{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 
 %files wayland
