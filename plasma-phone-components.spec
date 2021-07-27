@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	5.22.3
+Version:	5.22.4
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
