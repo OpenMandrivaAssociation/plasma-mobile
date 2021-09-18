@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	5.22.5
+Version:	5.22.90
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
@@ -124,6 +124,7 @@ X11 session files for Plasma phone components
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_homescreen.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
 #%{_libdir}/qt5/qml/QtQuick/VirtualKeyboard
+%{_libdir}/qt5/qml/org/kde/plasma/mm
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobileshell
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobilehomescreencomponents
 %{_datadir}/metainfo/org.kde.phone.activities.appdata.xml
@@ -138,6 +139,8 @@ X11 session files for Plasma phone components
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
 %{_datadir}/plasma/shells/org.kde.plasma.phoneshell
 %{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
+%{_datadir}/plasma/quicksettings/org.kde.plasma.airplanemode
+%{_datadir}/plasma/quicksettings/org.kde.plasma.nightcolor
 
 %files wayland
 %{_bindir}/kwinwrapper
