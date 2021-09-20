@@ -23,8 +23,6 @@ Patch0:		plasma-phone-components-x11-session.patch
 Patch2:		plasma-phone-components-dont-start-to-lockscreen.patch
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
-BuildRequires:	cmake
-BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Quick)
@@ -56,6 +54,7 @@ BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5Baloo)
 BuildRequires:	cmake(PkgConfig)
 BuildRequires:	cmake(KWinDBusInterface)
+BuildRequires:	cmake(KF5ModemManagerQt)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 Requires:	plasma-workspace
 Requires:	plasma-nano
@@ -84,21 +83,21 @@ Requires:	plasma-nm-mobile
 Requires:	spectacle
 
 %description
-Plasma components for mobile phones
+Plasma components for mobile phones.
 
 %package wayland
 Summary:	Wayland session files for Plasma phone components
 Requires:	plasma-workspace-wayland
 
 %description wayland
-Wayland session files for Plasma phone components
+Wayland session files for Plasma phone components.
 
 %package x11
 Summary:	X11 session files for Plasma phone components
 Requires:	plasma-workspace-x11
 
 %description x11
-X11 session files for Plasma phone components
+X11 session files for Plasma phone components.
 
 %prep
 %if "%{?commit:%{commit}}" != ""
