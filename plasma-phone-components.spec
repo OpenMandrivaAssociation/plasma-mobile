@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	5.23.4
+Version:	5.23.5
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
@@ -140,6 +140,15 @@ X11 session files for Plasma phone components.
 %{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 %{_datadir}/plasma/quicksettings/org.kde.plasma.airplanemode
 %{_datadir}/plasma/quicksettings/org.kde.plasma.nightcolor
+%{_datadir}/kservices5/plasma-applet-org.kde.phone.activities.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.phone.homescreen.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.phone.krunner.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.phone.panel.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.phone.taskpanel.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.airplanemode.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.nightcolor.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phone.desktop
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
 
 %files wayland
 %{_bindir}/kwinwrapper
