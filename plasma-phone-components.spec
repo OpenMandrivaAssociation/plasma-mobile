@@ -4,19 +4,19 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-phone-components
-Version:	5.23.5
+Version:	5.24.0
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-phone-components
 %if "%{?commit:%{commit}}" != ""
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/%{commit}/plasma-phone-components-%{commit}.tar.bz2
-Release:	0.%{snapshot}.%{commit}.1
+Release:	1.%{snapshot}.%{commit}.1
 %else
 %if 0%{?snapshot}
 Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
-Release:	0.%{snapshot}.1
+Release:	1.%{snapshot}.1
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
-Release:	2
+Release:	1
 %endif
 %endif
 Patch0:		plasma-phone-components-x11-session.patch
@@ -101,12 +101,12 @@ X11 session files for Plasma phone components.
 
 %prep
 %if "%{?commit:%{commit}}" != ""
-%autosetup -p1 -n %{name}-%{commit}
+%autosetup -p1 -n plasma-mobile-%{commit}
 %else
 %if 0%{?snapshot}
-%autosetup -p1 -n %{name}-master
+%autosetup -p1 -n plasma-mobile-master
 %else
-%autosetup -p1
+%autosetup -p1 -n plasma-mobile-%{version}
 %endif
 %endif
 %cmake_kde5
@@ -149,6 +149,7 @@ X11 session files for Plasma phone components.
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.nightcolor.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.phone.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.phoneshell.desktop
+%{_libdir}/qt5/qml/org/kde/plasma/quicksetting/nightcolor
 
 %files wayland
 %{_bindir}/kwinwrapper
