@@ -55,6 +55,7 @@ BuildRequires:	cmake(KF5Baloo)
 BuildRequires:	cmake(PkgConfig)
 BuildRequires:	cmake(KWinDBusInterface)
 BuildRequires:	cmake(KF5ModemManagerQt)
+BuildRequires:	cmake(KF5NetworkManagerQt)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 Requires:	plasma-workspace
 Requires:	plasma-nano
