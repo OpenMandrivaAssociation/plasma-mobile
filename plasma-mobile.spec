@@ -3,16 +3,16 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
-Name:		plasma-phone-components
-Version:	5.24.0
+Name:		plasma-mobile
+Version:	5.24.2
 Summary:	Plasma components for mobile phones
-# https://invent.kde.org/plasma/plasma-phone-components
+# https://invent.kde.org/plasma/plasma-mobile
 %if "%{?commit:%{commit}}" != ""
-Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/%{commit}/plasma-phone-components-%{commit}.tar.bz2
+Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{commit}/plasma-mobile-%{commit}.tar.bz2
 Release:	1.%{snapshot}.%{commit}.1
 %else
 %if 0%{?snapshot}
-Source0:	https://invent.kde.org/plasma/plasma-phone-components/-/archive/master/plasma-phone-components-master.tar.bz2
+Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2
 Release:	1.%{snapshot}.1
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
@@ -116,9 +116,10 @@ X11 session files for Plasma phone components.
 
 %install
 %ninja_install -C build
-%find_lang %{name} --all-name
+#find_lang %{name} --all-name
 
-%files -f %{name}.lang
+%files
+# -f %{name}.lang
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_phonepanel.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_homescreen.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_containment_phone_taskpanel.so
@@ -126,13 +127,9 @@ X11 session files for Plasma phone components.
 %{_libdir}/qt5/qml/org/kde/plasma/mm
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobileshell
 %{_libdir}/qt5/qml/org/kde/plasma/private/mobilehomescreencomponents
-%{_datadir}/metainfo/org.kde.phone.activities.appdata.xml
-%{_datadir}/metainfo/org.kde.phone.krunner.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.phone.appdata.xml
 %{_datadir}/plasma/look-and-feel/org.kde.plasma.phone
-%{_datadir}/plasma/plasmoids/org.kde.phone.activities
 %{_datadir}/plasma/plasmoids/org.kde.phone.homescreen
-%{_datadir}/plasma/plasmoids/org.kde.phone.krunner
 %{_datadir}/plasma/plasmoids/org.kde.phone.panel
 %{_datadir}/plasma/plasmoids/org.kde.phone.taskpanel
 %{_datadir}/knotifications5/plasma_phone_components.notifyrc
@@ -140,9 +137,7 @@ X11 session files for Plasma phone components.
 %{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 %{_datadir}/plasma/quicksettings/org.kde.plasma.airplanemode
 %{_datadir}/plasma/quicksettings/org.kde.plasma.nightcolor
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.activities.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.homescreen.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.phone.krunner.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.panel.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.phone.taskpanel.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.airplanemode.desktop
