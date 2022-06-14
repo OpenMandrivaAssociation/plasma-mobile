@@ -1,25 +1,26 @@
-diff -up plasma-phone-components-master/bin/CMakeLists.txt.2~ plasma-phone-components-master/bin/CMakeLists.txt
---- plasma-phone-components-master/bin/CMakeLists.txt.2~	2020-08-24 21:35:15.288768897 +0200
-+++ plasma-phone-components-master/bin/CMakeLists.txt	2020-08-24 21:36:02.302432936 +0200
-@@ -1,8 +1,15 @@
+diff -up plasma-mobile-5.25.0/bin/CMakeLists.txt.1~ plasma-mobile-5.25.0/bin/CMakeLists.txt
+--- plasma-mobile-5.25.0/bin/CMakeLists.txt.1~	2022-06-15 00:47:03.776269824 +0200
++++ plasma-mobile-5.25.0/bin/CMakeLists.txt	2022-06-15 00:48:37.257719658 +0200
+@@ -4,9 +4,16 @@
+ 
  configure_file(kwinwrapper.in ${CMAKE_CURRENT_BINARY_DIR}/kwinwrapper)
+ install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/kwinwrapper DESTINATION ${KDE_INSTALL_BINDIR})
 +configure_file(kwinwrapper_x11.in ${CMAKE_CURRENT_BINARY_DIR}/kwinwrapper_x11)
- install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/kwinwrapper DESTINATION ${BIN_INSTALL_DIR})
-+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/kwinwrapper_x11 DESTINATION ${BIN_INSTALL_DIR})
++install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/kwinwrapper_x11 DESTINATION ${KDE_INSTALL_BINDIR})
  
  configure_file(plasma-mobile.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma-mobile.desktop)
-+configure_file(plasma-mobile-x11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma-mobile-x11.desktop)
  install(FILES
          ${CMAKE_CURRENT_BINARY_DIR}/plasma-mobile.desktop
          DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
  )
++configure_file(plasma-mobile-x11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma-mobile-x11.desktop)
 +install(FILES
 +        ${CMAKE_CURRENT_BINARY_DIR}/plasma-mobile-x11.desktop
 +        DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
 +)
-diff -up plasma-phone-components-master/bin/kwinwrapper_x11.in.2~ plasma-phone-components-master/bin/kwinwrapper_x11.in
---- plasma-phone-components-master/bin/kwinwrapper_x11.in.2~	2020-08-24 21:34:35.518207158 +0200
-+++ plasma-phone-components-master/bin/kwinwrapper_x11.in	2020-08-24 21:35:10.779705209 +0200
+diff -up plasma-mobile-5.25.0/bin/kwinwrapper_x11.in.1~ plasma-mobile-5.25.0/bin/kwinwrapper_x11.in
+--- plasma-mobile-5.25.0/bin/kwinwrapper_x11.in.1~	2022-06-15 00:47:03.776269824 +0200
++++ plasma-mobile-5.25.0/bin/kwinwrapper_x11.in	2022-06-15 00:47:03.776269824 +0200
 @@ -0,0 +1,22 @@
 +#!/bin/sh
 +
@@ -43,9 +44,9 @@ diff -up plasma-phone-components-master/bin/kwinwrapper_x11.in.2~ plasma-phone-c
 +
 +touch /tmp/simplelogin_starting
 +startplasma-x11 --libinput --inputmethod maliit-keyboard --exit-with-session=/usr/lib64/libexec/startplasma-waylandsession
-diff -up plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake.2~ plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake
---- plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake.2~	2020-08-24 21:32:50.438722936 +0200
-+++ plasma-phone-components-master/bin/plasma-mobile-x11.desktop.cmake	2020-08-24 21:34:21.162004382 +0200
+diff -up plasma-mobile-5.25.0/bin/plasma-mobile-x11.desktop.cmake.1~ plasma-mobile-5.25.0/bin/plasma-mobile-x11.desktop.cmake
+--- plasma-mobile-5.25.0/bin/plasma-mobile-x11.desktop.cmake.1~	2022-06-15 00:47:03.777269829 +0200
++++ plasma-mobile-5.25.0/bin/plasma-mobile-x11.desktop.cmake	2022-06-15 00:47:03.777269829 +0200
 @@ -0,0 +1,69 @@
 +[Desktop Entry]
 +Exec=${CMAKE_INSTALL_FULL_BINDIR}/kwinwrapper_x11
