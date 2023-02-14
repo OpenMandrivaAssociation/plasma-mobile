@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-mobile
-Version:	5.26.5
+Version:	5.27.0
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-mobile
 %if "%{?commit:%{commit}}" != ""
@@ -56,6 +56,7 @@ BuildRequires:	cmake(KF5ModemManagerQt)
 BuildRequires:	cmake(KF5NetworkManagerQt)
 BuildRequires:	cmake(KF5KCMUtils)
 BuildRequires:	cmake(LibKWorkspace)
+BuildRequires:	cmake(KF5KirigamiAddons)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 Requires:	plasma-workspace
 Requires:	plasma-nano
@@ -125,6 +126,7 @@ Plasma components for mobile phones.
 %{_libdir}/qt5/qml/org/kde/plasma/quicksetting/nightcolor
 %{_libdir}/qt5/qml/org/kde/plasma/quicksetting/flashlight
 %{_libdir}/qt5/qml/org/kde/plasma/quicksetting/powermenu
+%{_libdir}/qt5/qml/org/kde/plasma/quicksetting/record
 %{_libdir}/qt5/qml/org/kde/plasma/quicksetting/screenrotation
 %{_libdir}/qt5/qml/org/kde/plasma/quicksetting/screenshot
 %{_datadir}/kpackage/kcms/kcm_mobileshell
@@ -135,7 +137,6 @@ Plasma components for mobile phones.
 %{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.caffeine
 %{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.flashlight
 %{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.keyboardtoggle
-%{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.location
 %{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.mobiledata
 %{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.nightcolor
 %{_datadir}/plasma/quicksettings/org.kde.plasma.quicksetting.powermenu
@@ -161,7 +162,6 @@ Plasma components for mobile phones.
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.donotdisturb.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.flashlight.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.keyboardtoggle.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.location.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.mobiledata.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.nightcolor.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.powermenu.appdata.xml
