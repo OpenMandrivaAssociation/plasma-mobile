@@ -16,7 +16,7 @@ Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mob
 Release:	1.%{snapshot}1
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
-Release:	1
+Release:	2
 %endif
 %endif
 License:	GPLv2/LGPLv2/LGPLv2.1
