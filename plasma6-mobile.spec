@@ -16,6 +16,7 @@ Group:		Graphical desktop/KDE
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Gui)
