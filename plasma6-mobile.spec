@@ -74,7 +74,6 @@ Requires:	qml(org.kde.milou)
 Requires:	qml(QtGraphicalEffects)
 Requires:	plasma6-kwin
 Requires:	plasma6-pa
-Requires:	plasma6-nm-mobile
 # Used by the screenshot button
 Requires:	spectacle
 Obsoletes:	%{name}-wayland < %{EVRD}
