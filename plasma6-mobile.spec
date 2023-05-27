@@ -53,8 +53,8 @@ BuildRequires:	cmake(KF6KirigamiAddons)
 BuildRequires:	cmake(KWinEffects) >= 5.27.80
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
-Requires:	plasma-workspace
-Requires:	plasma-nano
+Requires:	plasma6-workspace
+Requires:	plasma6-nano
 Requires:	qml(org.kde.plasma.core)
 Requires:	qml(org.kde.plasma.components)
 Requires:	qml(org.kde.plasma.workspace.components)
