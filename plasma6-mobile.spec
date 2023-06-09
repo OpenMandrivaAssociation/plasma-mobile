@@ -75,7 +75,8 @@ Requires:	qml(QtGraphicalEffects)
 Requires:	plasma6-kwin
 Requires:	plasma6-pa
 # Used by the screenshot button
-Requires:	spectacle
+# (but only once ported to Plasma6)
+#Requires:	spectacle
 Obsoletes:	%{name}-wayland < %{EVRD}
 Obsoletes:	%{name}-x11 < %{EVRD}
 
