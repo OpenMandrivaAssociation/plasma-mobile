@@ -51,7 +51,7 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5Baloo)
 BuildRequires:	cmake(PkgConfig) < 5.27.50
-BuildRequires:	cmake(KWinEffects)
+BuildRequires:	cmake(KWinEffects) < 5.27.50
 BuildRequires:	cmake(KF5ModemManagerQt)
 BuildRequires:	cmake(KF5NetworkManagerQt)
 BuildRequires:	cmake(KF5KCMUtils)
