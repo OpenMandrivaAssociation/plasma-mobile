@@ -50,12 +50,12 @@ BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5Baloo)
-BuildRequires:	cmake(PkgConfig)
-BuildRequires:	cmake(KWinDBusInterface)
+BuildRequires:	cmake(PkgConfig) < 5.27.50
+BuildRequires:	cmake(KWinEffects)
 BuildRequires:	cmake(KF5ModemManagerQt)
 BuildRequires:	cmake(KF5NetworkManagerQt)
 BuildRequires:	cmake(KF5KCMUtils)
-BuildRequires:	cmake(LibKWorkspace)
+BuildRequires:	cmake(LibKWorkspace) < 5.27.50
 BuildRequires:	cmake(KF5KirigamiAddons)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 Requires:	plasma-workspace
