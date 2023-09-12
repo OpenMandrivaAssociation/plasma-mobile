@@ -54,6 +54,8 @@ BuildRequires:	cmake(KWinEffects) >= 5.27.80
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	plasma6-xdg-desktop-portal-kde
+# For DBus interfaces
+BuildRequires:	plasma6-kwin
 Requires:	plasma6-workspace
 Requires:	plasma6-nano
 Requires:	qml(org.kde.plasma.core)
