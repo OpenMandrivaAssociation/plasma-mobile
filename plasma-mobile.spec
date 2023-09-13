@@ -9,11 +9,11 @@ Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-mobile
 %if "%{?commit:%{commit}}" != ""
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{commit}/plasma-mobile-%{commit}.tar.bz2
-Release:	1.%{snapshot}.%{commit}1
+Release:	0.%{snapshot}.%{commit}1
 %else
 %if 0%{?snapshot}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2
-Release:	1.%{snapshot}1
+Release:	0.%{snapshot}.1
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Release:	1
@@ -58,6 +58,8 @@ BuildRequires:	cmake(KF5KCMUtils)
 BuildRequires:	cmake(LibKWorkspace) < 5.27.50
 BuildRequires:	cmake(KF5KirigamiAddons)
 BuildRequires:	pkgconfig(gstreamer-1.0)
+# For DBus interfaces
+BuildRequires:	kwin
 Requires:	plasma-workspace
 Requires:	plasma-nano
 Requires:	qml(org.kde.plasma.core)
