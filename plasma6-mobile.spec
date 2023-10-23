@@ -1,6 +1,6 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231014
+%define git 20231023
 
 Name:		plasma6-mobile
 Version:	5.240.0
@@ -129,7 +129,6 @@ Plasma components for mobile phones.
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenrotation
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenshot
 %dir %{_qtdir}/qml/org/kde/private/mobile/homescreen
-%{_qtdir}/qml/org/kde/private/mobile/homescreen/folio
 %{_qtdir}/qml/org/kde/private/mobile/homescreen/halcyon
 %{_datadir}/applications/kcm_cellular_network.desktop
 %{_datadir}/applications/kcm_mobile_hotspot.desktop
