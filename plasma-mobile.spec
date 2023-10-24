@@ -4,19 +4,19 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma-mobile
-Version:	5.27.8
+Version:	5.27.9
 Summary:	Plasma components for mobile phones
 # https://invent.kde.org/plasma/plasma-mobile
 %if "%{?commit:%{commit}}" != ""
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{commit}/plasma-mobile-%{commit}.tar.bz2
-Release:	0.%{snapshot}.%{commit}.1
+Release:	0.%{snapshot}.%{commit}1
 %else
 %if 0%{?snapshot}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2
-Release:	0.%{snapshot}.1
+Release:	0.%{snapshot}1
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
-Release:	2
+Release:	1
 %endif
 %endif
 License:	GPLv2/LGPLv2/LGPLv2.1
