@@ -1,6 +1,6 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231023
+%define git 20231104
 
 Name:		plasma6-mobile
 Version:	5.240.0
@@ -50,7 +50,6 @@ BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(LibKWorkspace)
 BuildRequires:	cmake(KF6KirigamiAddons)
-BuildRequires:	cmake(KWinEffects) >= 5.27.80
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	plasma6-xdg-desktop-portal-kde
