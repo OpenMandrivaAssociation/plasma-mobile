@@ -50,6 +50,7 @@ BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(LibKWorkspace)
 BuildRequires:	cmake(KF6KirigamiAddons)
+BuildRequires:	cmake(KWin)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	plasma6-xdg-desktop-portal-kde
