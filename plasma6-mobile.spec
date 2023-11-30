@@ -3,14 +3,14 @@
 #define git 20231104
 
 Name:		plasma6-mobile
-Version:	5.27.80
+Version:	5.90.0
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2#/plasma-mobile-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/plasma-mobile-%{version}.tar.xz
 %endif
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake(ECM)
@@ -38,12 +38,12 @@ BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6Completion)
 BuildRequires:	cmake(KF6Bookmarks)
-BuildRequires:	cmake(KF6Wayland)
-BuildRequires:	cmake(KF6Plasma)
-BuildRequires:	cmake(KF6PlasmaQuick)
+BuildRequires:	cmake(Wayland) >= 5.90.0
+BuildRequires:	cmake(Plasma) >= 5.90.0
+BuildRequires:	cmake(PlasmaQuick) >= 5.90.0
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(KF6KIO)
-BuildRequires:	cmake(KF6Activities)
+BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	cmake(KF6Baloo)
 BuildRequires:	cmake(KF6Screen)
 BuildRequires:	cmake(PkgConfig)
@@ -151,7 +151,6 @@ Plasma components for mobile phones.
 %{_datadir}/metainfo/org.kde.plasma.mobile.panel.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.mobile.taskpanel.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.mobileinitialstart.*.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.phoneshell.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksettings.*.appdata.xml
 %{_datadir}/plasma/look-and-feel/org.kde.breeze.mobile
 %dir %{_datadir}/plasma/mobileinitialstart
@@ -161,6 +160,7 @@ Plasma components for mobile phones.
 %{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.panel
 %{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.taskpanel
 %{_datadir}/plasma/quicksettings/*
-%{_datadir}/plasma/shells/org.kde.plasma.phoneshell
 %{_datadir}/wayland-sessions/plasma-mobile.desktop
 %{_datadir}/metainfo/org.kde.plasma.quicksetting.*.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.mobileshell.appdata.xml
+%{_datadir}/plasma/shells/org.kde.plasma.mobileshell
