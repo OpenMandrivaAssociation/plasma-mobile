@@ -3,7 +3,7 @@
 #define git 20231104
 
 Name:		plasma6-mobile
-Version:	5.90.0
+Version:	5.91.0
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2#/plasma-mobile-%{git}.tar.bz2
@@ -126,7 +126,6 @@ Plasma components for mobile phones.
 %{_qtdir}/qml/org/kde/plasma/quicksetting/flashlight
 %{_qtdir}/qml/org/kde/plasma/quicksetting/nightcolor
 %{_qtdir}/qml/org/kde/plasma/quicksetting/powermenu
-%{_qtdir}/qml/org/kde/plasma/quicksetting/record
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenrotation
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenshot
 %dir %{_qtdir}/qml/org/kde/private/mobile/homescreen
@@ -140,7 +139,6 @@ Plasma components for mobile phones.
 %{_datadir}/applications/kcm_mobile_wifi.desktop
 %{_datadir}/applications/kcm_mobileshell.desktop
 %{_datadir}/dbus-1/interfaces/org.kde.plasmashell.Mobile.xml
-%{_datadir}/knotifications6/plasma_mobile_quicksetting_record.notifyrc
 %{_datadir}/knotifications6/plasma_mobile_quicksetting_screenshot.notifyrc
 %{_datadir}/kwin/effects/mobiletaskswitcher
 %{_datadir}/kwin/scripts/convergentwindows
