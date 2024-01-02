@@ -38,6 +38,7 @@ BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6Completion)
 BuildRequires:	cmake(KF6Bookmarks)
+BuildRequires:	cmake(KWayland)
 BuildRequires:	cmake(Wayland) >= 5.90.0
 BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(PlasmaQuick) >= 5.90.0
