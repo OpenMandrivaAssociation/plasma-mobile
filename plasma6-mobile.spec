@@ -57,6 +57,7 @@ BuildRequires:	cmake(KF6KirigamiAddons)
 BuildRequires:	cmake(KWin)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
+BuildRequires:	pkgconfig(libudev)
 # For DBus interfaces
 BuildRequires:	plasma6-kwin
 Requires:	plasma6-workspace
