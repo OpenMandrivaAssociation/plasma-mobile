@@ -3,7 +3,7 @@
 #define git 20231104
 
 Name:		plasma6-mobile
-Version:	5.92.0
+Version:	5.93.0
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2#/plasma-mobile-%{git}.tar.bz2
