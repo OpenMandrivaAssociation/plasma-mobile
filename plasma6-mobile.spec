@@ -1,12 +1,14 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
-#define git 20231104
+%define git 20240217
+%define gitbranch Plasma/6.0
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name:		plasma6-mobile
-Version:	5.93.0
+Version:	5.94.0
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/master/plasma-mobile-master.tar.bz2#/plasma-mobile-%{git}.tar.bz2
+Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{gitbranch}/plasma-mobile-%{gitbranchd}.tar.bz2#/plasma-mobile-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/plasma-mobile-%{version}.tar.xz
 %endif
@@ -91,7 +93,7 @@ Obsoletes:	%{name}-x11 < %{EVRD}
 Plasma components for mobile phones.
 
 %prep
-%autosetup -p1 -n plasma-mobile-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n plasma-mobile-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
