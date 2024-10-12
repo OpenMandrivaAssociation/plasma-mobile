@@ -5,7 +5,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name:		plasma6-mobile
-Version:	6.1.5
+Version:	6.2.0
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{gitbranch}/plasma-mobile-%{gitbranchd}.tar.bz2#/plasma-mobile-%{git}.tar.bz2
@@ -128,9 +128,11 @@ Plasma components for mobile phones.
 %{_qtdir}/qml/org/kde/plasma/mm
 %{_qtdir}/qml/org/kde/plasma/mobileinitialstart
 %{_qtdir}/qml/org/kde/plasma/private/mobileshell
+%dir %{_qtdir}/qml/org/kde/plasma/quicksetting
 %{_qtdir}/qml/org/kde/plasma/quicksetting/flashlight
 %{_qtdir}/qml/org/kde/plasma/quicksetting/nightcolor
 %{_qtdir}/qml/org/kde/plasma/quicksetting/powermenu
+%{_qtdir}/qml/org/kde/plasma/quicksetting/record
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenrotation
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenshot
 %dir %{_qtdir}/qml/org/kde/private/mobile/homescreen
@@ -144,7 +146,6 @@ Plasma components for mobile phones.
 %{_datadir}/applications/kcm_mobile_wifi.desktop
 %{_datadir}/applications/kcm_mobileshell.desktop
 %{_datadir}/dbus-1/interfaces/org.kde.plasmashell.Mobile.xml
-%{_datadir}/knotifications6/plasma_mobile_quicksetting_screenshot.notifyrc
 %{_datadir}/kwin/effects/mobiletaskswitcher
 %{_datadir}/kwin/scripts/convergentwindows
 %{_datadir}/metainfo/org.kde.breeze.mobile.appdata.xml
@@ -153,6 +154,26 @@ Plasma components for mobile phones.
 %{_datadir}/metainfo/org.kde.plasma.mobile.panel.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.mobile.taskpanel.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.mobileinitialstart.*.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.mobileshell.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.mobile.defaultNavigationPanel.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.mobile.defaultStatusBar.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.airplanemode.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.audio.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.battery.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.bluetooth.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.caffeine.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.donotdisturb.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.flashlight.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.hotspot.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.keyboardtoggle.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.mobiledata.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.nightcolor.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.powermenu.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.record.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.screenrotation.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.screenshot.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.settingsapp.appdata.xml
+%{_datadir}/metainfo/org.kde.plasma.quicksetting.wifi.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.quicksettings.*.appdata.xml
 %{_datadir}/plasma/look-and-feel/org.kde.breeze.mobile
 %dir %{_datadir}/plasma/mobileinitialstart
@@ -163,8 +184,10 @@ Plasma components for mobile phones.
 %{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.taskpanel
 %{_datadir}/plasma/quicksettings/*
 %{_datadir}/wayland-sessions/plasma-mobile.desktop
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.*.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobileshell.appdata.xml
 %{_datadir}/plasma/shells/org.kde.plasma.mobileshell
 %{_qtdir}/plugins/kf6/kded/kded_plasma_mobile_autodetect_apn.so
 %{_datadir}/plasma-mobile-apn-info
+%{_bindir}/plasma-mobile-notificationtest
+%{_datadir}/knotifications6/plasma_mobile_*.notifyrc
+%{_datadir}/plasma/layout-templates/org.kde.plasma.mobile.defaultNavigationPanel
+%{_datadir}/plasma/layout-templates/org.kde.plasma.mobile.defaultStatusBar
