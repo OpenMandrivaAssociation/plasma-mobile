@@ -63,6 +63,7 @@ BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	pkgconfig(libudev)
 BuildRequires:	pkgconfig(xkbcommon)
+BuildRequires:	pkgconfig(wayland-client)
 # For DBus interfaces
 BuildRequires:	plasma6-kwin
 Requires:	plasma6-workspace
