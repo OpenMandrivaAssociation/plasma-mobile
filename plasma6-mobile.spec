@@ -23,6 +23,7 @@ BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6Sensors)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6WaylandClient)
 #BuildRequires:	cmake(KF6Akonadi)
 #BuildRequires:	cmake(KF6Libkdepim)
 BuildRequires:	cmake(QCoro6)
@@ -61,6 +62,7 @@ BuildRequires:	cmake(LayerShellQt)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	pkgconfig(libudev)
+BuildRequires:	pkgconfig(xkbcommon)
 # For DBus interfaces
 BuildRequires:	plasma6-kwin
 Requires:	plasma6-workspace
