@@ -4,7 +4,7 @@
 %define gitbranch Plasma/6.0
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
-Name:		plasma6-mobile
+Name:		plasma-mobile
 Version:	6.3.4
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
@@ -12,7 +12,7 @@ Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{gitbranch}/plas
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/plasma-mobile-%{version}.tar.xz
 %endif
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake(ECM)
@@ -92,24 +92,15 @@ Requires:	plasma6-pa
 #Requires:	spectacle
 Obsoletes:	%{name}-wayland < %{EVRD}
 Obsoletes:	%{name}-x11 < %{EVRD}
+# Renamed after 6.0 2025-05-03
+%rename plasma6-mobile
+
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Plasma components for mobile phones.
-
-%prep
-%autosetup -p1 -n plasma-mobile-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name
 
 %files -f %{name}.lang
 %{_bindir}/plasma-mobile-envmanager
