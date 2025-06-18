@@ -62,6 +62,7 @@ BuildRequires:	cmake(LayerShellQt)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	pkgconfig(libudev)
+BuildRequires:	pkgconfig(libdrm)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(wayland-client)
 # For DBus interfaces
