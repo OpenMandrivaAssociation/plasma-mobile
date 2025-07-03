@@ -67,7 +67,7 @@ BuildRequires:	pkgconfig(libdrm)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(wayland-client)
 # For DBus interfaces
-BuildRequires:	plasma6-kwin
+BuildRequires:	plasma6-kwin-wayland
 Requires:	plasma6-workspace
 Requires:	plasma6-nano
 Requires:	qml(org.kde.plasma.core)
