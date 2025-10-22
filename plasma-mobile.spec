@@ -5,7 +5,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name:		plasma-mobile
-Version:	6.4.5
+Version:	6.5.0
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{gitbranch}/plasma-mobile-%{gitbranchd}.tar.bz2#/plasma-mobile-%{git}.tar.bz2
@@ -129,8 +129,6 @@ Plasma components for mobile phones.
 %{_qtdir}/qml/org/kde/plasma/quicksetting/record
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenrotation
 %{_qtdir}/qml/org/kde/plasma/quicksetting/screenshot
-%dir %{_qtdir}/qml/org/kde/private/mobile/homescreen
-%{_qtdir}/qml/org/kde/private/mobile/homescreen/halcyon
 %{_datadir}/applications/kcm_mobile_info.desktop
 %{_datadir}/applications/kcm_mobile_onscreenkeyboard.desktop
 %{_datadir}/applications/kcm_mobile_time.desktop
@@ -138,41 +136,9 @@ Plasma components for mobile phones.
 %{_datadir}/dbus-1/interfaces/org.kde.plasmashell.Mobile.xml
 %{_datadir}/kwin/effects/mobiletaskswitcher
 %{_datadir}/kwin/scripts/convergentwindows
-%{_datadir}/metainfo/org.kde.breeze.mobile.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobile.homescreen.folio.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobile.homescreen.halcyon.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobile.panel.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobile.taskpanel.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobileinitialstart.*.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobileshell.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobile.defaultNavigationPanel.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.mobile.defaultStatusBar.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.airplanemode.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.audio.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.battery.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.bluetooth.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.caffeine.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.donotdisturb.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.flashlight.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.hotspot.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.keyboardtoggle.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.mobiledata.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.nightcolor.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.powermenu.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.record.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.screenrotation.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.screenshot.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.settingsapp.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.wifi.appdata.xml
 %{_datadir}/plasma/look-and-feel/org.kde.breeze.mobile
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.autohidepanels.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.quicksetting.docked.appdata.xml
 %dir %{_datadir}/plasma/mobileinitialstart
 %{_datadir}/plasma/mobileinitialstart/org.kde.plasma.mobileinitialstart.*
-%{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.homescreen.folio
-%{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.homescreen.halcyon
-%{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.panel
-%{_datadir}/plasma/plasmoids/org.kde.plasma.mobile.taskpanel
 %{_datadir}/plasma/quicksettings/*
 %{_datadir}/wayland-sessions/plasma-mobile.desktop
 %{_datadir}/plasma/shells/org.kde.plasma.mobileshell
@@ -182,3 +148,19 @@ Plasma components for mobile phones.
 %{_datadir}/knotifications6/plasma_mobile_*.notifyrc
 %{_datadir}/plasma/layout-templates/org.kde.plasma.mobile.defaultNavigationPanel
 %{_datadir}/plasma/layout-templates/org.kde.plasma.mobile.defaultStatusBar
+%{_libdir}/libexec/kf6/kauth/flashlighthelper
+%{_libdir}/libexec/kf6/kauth/waydroidhelper
+%{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_navigation.so
+%{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_waydroidintegration.so
+%{_qtdir}/qml/org/kde/plasma/quicksetting/kscreenosd/libkscreenosdplugin.so
+%{_qtdir}/qml/org/kde/plasma/quicksetting/kscreenosd/qmldir
+%{_datadir}/applications/kcm_navigation.desktop
+%{_datadir}/applications/kcm_waydroidintegration.desktop
+%{_datadir}/dbus-1/interfaces/org.kde.plasmashell.Waydroid.xml
+%{_datadir}/dbus-1/interfaces/org.kde.plasmashell.WaydroidApplication.xml
+%{_datadir}/dbus-1/system-services/org.kde.plasma.mobileshell.flashlighthelper.service
+%{_datadir}/dbus-1/system-services/org.kde.plasma.mobileshell.waydroidhelper.service
+%{_datadir}/dbus-1/system.d/org.kde.plasma.mobileshell.flashlighthelper.conf
+%{_datadir}/dbus-1/system.d/org.kde.plasma.mobileshell.waydroidhelper.conf
+%{_datadir}/polkit-1/actions/org.kde.plasma.mobileshell.flashlighthelper.policy
+%{_datadir}/polkit-1/actions/org.kde.plasma.mobileshell.waydroidhelper.policy
