@@ -5,7 +5,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name:		plasma-mobile
-Version:	6.6.5
+Version:	6.7.1
 Summary:	Plasma components for mobile phones
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{gitbranch}/plasma-mobile-%{gitbranchd}.tar.bz2#/plasma-mobile-%{git}.tar.bz2
@@ -120,7 +120,6 @@ Plasma components for mobile phones.
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_mobile_info.so
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_mobile_time.so
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_mobileshell.so
-%{_qtdir}/qml/org/kde/plasma/mm
 %{_qtdir}/qml/org/kde/plasma/mobileinitialstart
 %{_qtdir}/qml/org/kde/plasma/private/mobileshell
 %dir %{_qtdir}/qml/org/kde/plasma/quicksetting
@@ -167,3 +166,4 @@ Plasma components for mobile phones.
 %{_datadir}/dbus-1/interfaces/org.kde.plasmashell.Mobile.Panels.xml
 %{_datadir}/metainfo/org.kde.plasma.mobileshell.metainfo.xml
 %{_datadir}/plasma-mobile-device-presets
+%{_datadir}/qlogging-categories6/plasmamobile.categories
