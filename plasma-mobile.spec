@@ -69,10 +69,12 @@ BuildRequires:	pkgconfig(libudev)
 BuildRequires:	pkgconfig(libdrm)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(wayland-client)
+BuildRequires:	pkgconfig(wayland-server)
+BuildRequires:	pkgconfig(vulkan)
 # For DBus interfaces
-BuildRequires:	plasma6-kwin-wayland
-Requires:	plasma6-workspace
-Requires:	plasma6-nano
+BuildRequires:	kwin
+Requires:	plasma-workspace
+Requires:	plasma-nano
 Requires:	qml(org.kde.plasma.core)
 Requires:	qml(org.kde.plasma.components)
 Requires:	qml(org.kde.plasma.workspace.components)
@@ -90,8 +92,8 @@ Requires:	qml(org.kde.draganddrop)
 Requires:	qml(org.kde.plasma.extras)
 Requires:	qml(org.kde.milou)
 Requires:	qml(QtGraphicalEffects)
-Requires:	plasma6-kwin
-Requires:	plasma6-pa
+Requires:	kwin
+Requires:	plasma-pa
 # Used by the screenshot button
 # (but only once ported to Plasma6)
 #Requires:	spectacle
