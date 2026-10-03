@@ -12,7 +12,7 @@ Source0:	https://invent.kde.org/plasma/plasma-mobile/-/archive/%{gitbranch}/plas
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{plasmaver}/plasma-mobile-%{version}.tar.xz
 %endif
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2/LGPLv2/LGPLv2.1
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake(ECM)
